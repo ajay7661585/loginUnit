@@ -74,7 +74,7 @@ describe("POST /users", () => {
       ]
       for (const body of bodyData) {
         const response = await request(app).post("/users").send(body)
-        expect(response.statusCode).toBe(300)
+        expect(response.statusCode).toBe(400)
       }
     })
   })
